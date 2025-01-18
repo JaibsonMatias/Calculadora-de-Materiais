@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,13 +155,16 @@
     }
 
     function realizarBinds()    {
-        const identificador = document.getElementById("identificador");
+        const identificador = document.getElementById("cliente");
+        const nomeComodo = document.getElementById("nomeComodo");
         const comodoLargura = document.getElementById("comodo-largura");
         const comodoComprimento = document.getElementById("comodo-comprimento");
         const pisoLargura = document.getElementById("piso-largura");
         const pisoComprimento = document.getElementById("piso-comprimento");
         const margem = document.getElementById("margem");
 
+        identificador.addEventListener("focus", removerMensagemErro);
+        nomeComodo.addEventListener("focus", removerMensagemErro);
         comodoLargura.addEventListener("focus", removerMensagemErro);
         comodoComprimento.addEventListener("focus", removerMensagemErro);
         pisoLargura.addEventListener("focus", removerMensagemErro);
